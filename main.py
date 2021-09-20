@@ -39,6 +39,8 @@ def angleBetweenVectors(A, B, C): #Angle between 2 vectors with A common point
     v1 = (A[0]-B[0], A[1]-B[1])
     v2 = (A[0]-C[0], A[1]-C[1])
     res = ((v1[0]*v2[0])+(v1[1]*v2[1])) / ((math.sqrt(v1[0]**2 + v1[1]**2))*(math.sqrt(v2[0]**2 + v2[1]**2)))
+    if res > 1:
+        res = 1
     return math.acos(res)
 
 
